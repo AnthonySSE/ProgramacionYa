@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.3</title>
+</head>
+<!--Confeccionar un programa que permita cargar un número entero positivo de hasta tres cifras y muestre un mensaje indicando si tiene 1, 2, o 3 cifras.-->
+<body>
+    <script type="text/javascript">
+    let numero;
+    numero = parseInt(prompt("Introduzca un número: "), 10);
+    if (numero >= 100) {
+        document.write("El número ingresado tiene 3 o más dígitos.");
+    }
+    else if (numero <=9) {
+        document.write("El número ingresado tiene 1 dígito.");
+    }
+    else
+    {
+        document.write("El número ingresado tiene 2 dígitos.");
+    }
+    </script>
+</body>
+</html>

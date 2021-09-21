@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.4</title>
+</head>
+<!--De un postulante a un empleo, que realizó un test de capacitación, se obtuvo la siguiente información: nombre del postulante, cantidad total de preguntas que se le realizaron y cantidad de preguntas que contestó correctamente. Se pide confeccionar un programa que lea los datos del postulante e informe el nivel del mismo según el porcentaje de respuestas correctas que ha obtenido, y sabiendo que:
+Nivel superior: Porcentaje>=90%.
+Nivel medio: Porcentaje>=75% y <90%.
+Nivel regular: Porcentaje>=50% y <75%.
+Fuera de nivel: Porcentaje<50%.-->
+<body>
+    <script type="text/javascript">
+    let nombre, pregrealizadas, pregcorrectas, nivel;
+    nombre = prompt("Introduzca el nombre del postulante: ");
+    pregrealizadas = parseInt(prompt("¿Cuántas preguntas se le realizaron?"), 10);
+    pregcorrectas = parseInt(prompt("¿Cuántas preguntas contestó correctamente?"), 10);
+    nivel = (pregcorrectas / pregrealizadas) * 100;
+    if (nivel >= 90) {
+        document.write("¡Nivel superior! Obtuve un: " + nivel + "%");
+    }
+    else if (nivel >= 75 && nivel < 90)
+    {
+        document.write("¡Nivel medio! Obtuve un: " + nivel + "%");
+    }
+    else if (nivel >= 50 && nivel < 75)
+    {
+        document.write("¡Nivel regular! Obtuve un: " + nivel + "%");
+    }
+    else
+    {
+        document.write("¡Fuera de nivel! Obtuve un: " + nivel + "%");
+    }
+    </script>
+</body>
+</html>
