@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.4</title>
+</head>
+<!--Escribir un programa que pida ingresar la coordenada de un punto en el plano, es decir dos valores enteros x e y.
+Posteriormente imprimir en pantalla en qué cuadrante se ubica dicho punto. (1º Cuadrante si x > 0 Y y > 0 , 2º Cuadrante: x < 0 Y y > 0, etc.)-->
+<body>
+    <script type="text/javascript">
+    let x, y;
+    x = parseInt(prompt("Introduzca el valor de x"), 10);
+    y = parseInt(prompt("Introduzca el valor de y"), 10);
+    if (x > 0 && y > 0) {
+        document.write("Primer Cuadrante.");
+    }
+    else if (x < 0 && y > 0) {
+        document.write("Segundo Cuadrante.");
+    }
+    else if (x < 0 && y <0) {
+        document.write("Tercer Cuadrante.");
+    }
+    else
+    {
+        document.write("Cuarto Cuadrante.");
+    }
+    </script>
+</body>
+</html>

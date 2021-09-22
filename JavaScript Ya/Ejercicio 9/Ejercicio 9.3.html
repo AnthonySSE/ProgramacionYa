@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.3</title>
+</head>
+<!--Se ingresan por teclado tres números, si todos los valores ingresados son menores a 10, imprimir en la página la leyenda ' Todos los números son menores a diez'.-->
+<body>
+    <script type="text/javascript">
+    let n1, n2, n3;
+    n1 = parseInt(prompt("Ingrese el primer valor: "), 10);
+    n2 = parseInt(prompt("Ingrese el segundo valor: "), 10);
+    n3 = parseInt(prompt("Ingrese el tercer valor: "), 10);
+    if (n1 <= 9 && n2 <= 9 && n3 <=9) {
+        document.write("Todos los valores son menores a 10.");
+    }
+    else
+    {
+        document.write("No todos los valores son menores a 10.");
+    }
+    </script>
+</body>
+</html>

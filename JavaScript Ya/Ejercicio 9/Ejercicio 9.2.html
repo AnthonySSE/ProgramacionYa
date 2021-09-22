@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.2</title>
+</head>
+<!--Se ingresan tres valores por teclado, si todos son iguales se imprime la suma del primero con el segundo y a este resultado se lo multiplica por el tercero (tener en cuenta que puede haber tres condiciones simples)-->
+<body>
+    <script type="text/javascript">
+    let n1,n2,n3,suma,producto;
+    n1 = parseInt(prompt("Introduzca el primer valor: "), 10);
+    n2 = parseInt(prompt("Introduzca el segundo valor: "), 10);
+    n3 = parseInt(prompt("Introduzca el tercer valor: "), 10);
+    if (n1 == n2 && n1 == n3) {
+        suma = (n1 + n2);
+        producto = suma*n3;
+        document.write("La suma de " + n1 + " + " + n2 + " es igual a: " + suma + "<br>");
+        document.write("El producto de " + suma + " * " + n3 + " es igual a: " + producto + "<br>");
+    }
+    else
+    {
+        document.write("Los valores no son iguales.");
+    }
+    </script>
+</body>
+</html>

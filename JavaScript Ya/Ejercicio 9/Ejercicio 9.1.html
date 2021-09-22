@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9.1</title>
+</head>
+<!--Realizar un programa que pida cargar una fecha cualquiera, luego verificar si dicha fecha corresponde a Navidad (se debe cargar por separado el dia, el mes y el año)-->
+<body>
+    <script type="text/javascript">
+    let dia, mes, anio;
+    dia = parseInt(prompt("Inserte el día: "), 10);
+    mes = parseInt(prompt("Inserte el mes: "), 10);
+    anio = parseInt(prompt("Inserte el año: "), 10);
+    if (dia == 25 && mes == 12) {
+        document.write("¡FELIZ NAVIDAD!");
+    }
+    else
+    {
+        document.write("No es navidad.");
+    }
+    </script>
+</body>
+</html>
