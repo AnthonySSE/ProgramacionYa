@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+</head>
+<!--Solicitar el ingreso alguna de estas palabras (casa, mesa, perro, gato) luego mostrar la palabra traducida en inglés. Es decir, si se ingresa 'casa' debemos mostrar el texto 'house' en la página.-->
+<body>
+    <script type="text/javascript">
+    let palabra;
+    palabra = prompt("Ingrese una de las siguientes palabras (casa, mesa, perro, gato): ");
+    switch (palabra) {
+        case "casa":
+            document.write("House");
+            break;
+        case "mesa":
+            document.write("Table");
+            break;
+        case "perro":
+            document.write("Dog");
+            break;
+        case "gato":
+            document.write("Cat");
+            break;
+        default:
+            document.write("No ingresó ninguna palabra de la lista.");
+            break;
+    }
+    </script>
+</body>
+</html>
