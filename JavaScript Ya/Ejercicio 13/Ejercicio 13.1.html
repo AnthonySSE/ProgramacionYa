@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13.1</title>
+</head>
+<!--Escribir un programa que lea 10 notas de alumnos y nos informe cuántos tienen notas mayores o iguales a 7 y cuántos menores.-->
+<body>
+    <script type="text/javascript">
+    let notas, nmayores, nmenores;
+    notas =0;
+    nmayores = 0;
+    nmenores = 0;
+    registro = 1;
+    while (registro <= 10) {
+        notas = parseInt(prompt("Ingerese la calificación: "), 10);
+        if (notas >= 7) {
+            nmayores = nmayores + 1;
+        }
+        else
+        {
+            nmenores = nmenores + 1;
+        }
+        registro ++;
+    }
+    document.write("Notas mayores o iguales a 7: " + nmayores + "</br>");
+    document.write("Notas menores a 7: " + nmenores + "</br>");
+    </script>
+</body>
+</html>

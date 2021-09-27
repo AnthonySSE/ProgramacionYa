@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercico 13.3</title>
+</head>
+<!--En una empresa trabajan 5 empleados cuyos sueldos oscilan entre $100 y $500, realizar un programa que lea los sueldos que cobra cada empleado e informe cuántos empleados cobran entre $100 y $300 y cuántos cobran más de $300. Además el programa deberá informar el importe que gasta la empresa en sueldos al personal.-->
+<body>
+    <script type="text/javascript">
+        let sueldo, sentre, smayor, importe, registro;
+        registro = 1;
+        sentre = 0;
+        smayor = 0;
+        importe = 0;
+        while (registro <= 5) {
+        sueldo = parseInt(prompt("Ingrese el sueldo: "), 10);
+        importe = importe + sueldo;
+        if (sueldo >=100 && sueldo <= 300) {
+            sentre = sentre + 1;
+        }
+        else if (sueldo > 300) {
+            smayor = smayor + 1;
+        }
+        registro++;
+        }
+        document.write("La cantidad de empleados que cobra entre $100 y $300 es: " + sentre + "</br>");
+        document.write("La cantidad de empleados que cobra más de $300 es: " + smayor + "</br>");
+        document.write("El importe total en salarios es de: " + importe + "</br>");
+        </script>
+</body>
+</html>
