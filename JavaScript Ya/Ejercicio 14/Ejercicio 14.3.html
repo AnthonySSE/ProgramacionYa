@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14.3</title>
+</head>
+<!--Se realizó un censo provincial y se desea procesar la información obtenida en dicho censo. De cada una de las personas censadas se tiene la siguiente información: número de documento, edad y sexo ('femenino' o 'masculino')
+Se pide confeccionar un programa que lea los datos de cada persona censada (para finalizar ingresar el valor cero en el número de documento) e informar:
+ 
+a)	Cantidad total de personas censadas.
+b)	Cantidad de varones.
+c)	Cantidad de mujeres.
+d)	Cantidad de varones cuya edad varía entre 16 y 65 años.-->
+<body>
+    <script type="text/javascript">
+    let numdoc, edad, sexo, persona, varon, mujer, varonentre;
+    persona     = 0;
+    varon       = 0;
+    mujer       = 0;
+    varonentre  = 0;
+    do {
+        numdoc = parseInt(prompt("Ingrese el número de documento: "), 10);
+        if (numdoc != 0) {
+        edad   = parseInt(prompt("Ingrese la edad: "), 10);
+        sexo   = prompt("Ingrese el sexo (M o F): ");
+        persona = persona + 1;
+        if (sexo == "M" || sexo == "m") {
+            varon = varon + 1;
+            if (edad >= 16 && edad <=65) {
+                varonentre ++;
+            }
+        }
+        if(sexo == 'F' || sexo == 'f') {
+            mujer = mujer + 1;
+        }
+    }
+    } while (numdoc != 0);
+    document.write("La cantidad de personas evaluadas fue: " + persona + "</br>");
+    document.write("La cantidad de varones evaluados fue: " + varon + "</br>");
+    document.write("La cantidad de mujeres evaluadas fue: " + mujer + "</br>");
+    document.write("La cantidad de varones entre 16 y 65 años evaluadas fue: " + varonentre + "</br>");
+    </script>
+    
+</body>
+</html>

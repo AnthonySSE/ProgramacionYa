@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14.2</title>
+</head>
+<!--En un banco se procesan datos de las cuentas corrientes de sus clientes. De cada cuenta corriente se conoce: número de cuenta, nombre del cliente y saldo actual. El ingreso de datos debe finalizar al ingresar un valor negativo en el número de cuenta.
+Se pide confeccionar un programa que lea los datos de las cuentas corrientes e informe:
+a) De cada cuenta: número de cuenta, nombre del cliente y estado de la cuenta según su saldo, sabiendo que:
+Estado de la cuenta	'Acreedor' si el saldo es >0.
+			'Deudor' si el saldo es <0.
+			'Nulo' si el saldo es =0.
+b) La suma total de los saldos acreedores.-->
+<body>
+    <script type="text/javascript">
+    let numero, nombre, saldo, valor;
+    do {
+    numero = parseInt(prompt("Ingrese el numero de cuenta: "), 10);
+    nombre = prompt("Ingrese el nombre del cliente: ");
+    saldo  = parseInt(prompt("Ingrese el saldo actual del cliente: "), 10);
+    if (saldo > 0) {
+        document.write("Número de cuenta: " + numero + "</br>");
+        document.write("Nombre del cliente: " + nombre + "</br>");
+        document.write("Saldo del cliente: " + saldo + "</br>");
+        document.write("El estado de la cuenta es acreedor. </br>");
+        document.write("</br>");
+    }
+    else if (saldo < 0) {
+        document.write("Número de cuenta: " + numero + "</br>");
+        document.write("Nombre del cliente: " + nombre + "</br>");
+        document.write("Saldo del cliente: " + saldo + "</br>");
+        document.write("El estado de la cuenta es deudor.");
+    }
+    else
+    {
+        document.write("Número de cuenta: " + numero + "</br>");
+        document.write("Nombre del cliente: " + nombre + "</br>");
+        document.write("Saldo del cliente: " + saldo + "</br>");
+        document.write("El estado de la cuenta es nulo. </br>");
+        document.write("</br>");
+    }
+    } while (saldo >= 0);
+    
+
+    </script>
+</body>
+</html>
