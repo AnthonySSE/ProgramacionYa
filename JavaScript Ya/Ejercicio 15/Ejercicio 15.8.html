@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15.8</title>
+</head>
+<!--Se cuenta con la siguiente información:
+Las edades de 5 estudiantes del turno mañana.
+Las edades de 6 estudiantes del turno tarde.
+Las edades de 11 estudiantes del turno noche.
+Las edades de cada estudiante deben ingresarse por teclado.
+a) Obtener el promedio de las edades de cada turno (tres promedios).
+b) Imprimir dichos promedios (promedio de cada turno).
+c) Mostrar por pantalla un mensaje que indique cual de los tres turnos tiene un promedio de edades mayor.-->
+<body>
+    <script type="text/javascript">
+    let tmanana, ttarde, tnoche, ptmanana, pttarde, ptnoche, tmananain, ttardein, tnochein;
+    tmanana = 0;
+    ttarde  = 0;
+    tnoche  = 0;
+    for (let tm = 1; tm <= 5; tm++) {
+        tmananain   = parseInt(prompt("Introduzca la edad del estudiante " + tm + " de la mañana: "), 10);
+        tmanana     = tmanana + tmananain;
+        ptmanana    = tmanana / 5;
+    }
+    for (let tt = 1; tt <=6 ; tt++){
+        ttardein    = parseInt(prompt("Introduzca la edad del estudiante " + tt + " de la tarde: "), 10);;
+        ttarde      = ttarde + ttardein;
+        pttarde     = ttarde / 6;
+    }
+    for (let tn = 1; tn <=11 ; tn++){
+        tnochein    = parseInt(prompt("Introduzca la edad del estudiante " + tn + " de la noche: "), 10);;
+        tnoche      = tnoche + tnochein;
+        ptnoche     = tnoche / 11;
+    }
+    document.write("El promedio de edades de la mañana es: " + ptmanana + "</br>");
+    document.write("El promedio de las edades de la tarde es: " + pttarde + "</br>");
+    document.write("El promedio de las edades de la noche es: " + ptnoche + "</br></br>");
+    if (ptmanana > pttarde && ptmanana > ptnoche) {
+        document.write("El turno de la mañana tiene el mayor promedio. </br>");
+    }
+    else if (pttarde > ptmanana && pttarde > ptnoche) {
+        document.write("El turno de la tarde tiene el mayor promedio.</br>");
+    }
+    else
+    {
+        document.write("El turno de la noche tiene el mayor promedio.</br>");
+    }
+    </script>
+</body>
+</html>

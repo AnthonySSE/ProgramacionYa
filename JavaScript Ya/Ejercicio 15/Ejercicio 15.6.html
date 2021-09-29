@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15.6</title>
+</head>
+<!--Escribir un programa que pida ingresar coordenadas (x,y) que representan puntos en el plano. Informar cuántos puntos se han ingresado en el primer, segundo, tercer y cuarto cuadrante. Al comenzar el programa se pide que se ingrese la cantidad de puntos a procesar.-->
+<body>
+    <script type="text/javascript">
+    let x, y, cant, c1, c2, c3, c4;
+    c1 = 0;
+    c2 = 0;
+    c3 = 0;
+    c4 = 0;
+    cant = parseInt(prompt("Introduzca la cantidad de puntos: "), 10);
+    for (let r = 1; r <= cant; r++) {
+        x = parseInt(prompt("Introduzca el valor de x: "), 10);
+        y = parseInt(prompt("Introduzca el valor de y: "), 10);
+        if (x >0 && y > 0) {
+           c1++; 
+        }
+        else if (x < 0 && y > 0) {
+            c2 ++;
+        }
+        else if (x < 0 && y < 0) {
+            c3++;
+        }
+        else if (x > 0 && y < 0) {
+            c4++;
+        }
+    }
+    document.write("Hay " + c1 + " puntos en el cuadrante uno. </br>");
+    document.write("Hay " + c2 + " puntos en el cuadrante dos. </br>");
+    document.write("Hay " + c3 + " puntos en el cuadrante tres. </br>");
+    document.write("Hay " + c4 + " puntos en el cuadrante cuatro. </br>");
+    </script>
+</body>
+</html>

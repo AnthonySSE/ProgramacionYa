@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15.7</title>
+</head>
+<!--Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
+a) La cantidad de valores negativos ingresados.
+b) La cantidad de valores positivos ingresados.
+c) La cantidad de múltiplos de 15.
+d) El valor acumulado de los números ingresados que son pares.-->
+<body>
+    <script type="text/javascript">
+    let valor, vnegativo, vpositivo, vmultiplo15, vacumulado;
+    vnegativo   = 0;
+    vpositivo   = 0;
+    vmultiplo15 = 0;
+    vacumulado  = 0;
+    for (let c = 1; c <= 10; c++) {
+        valor = parseInt(prompt("Introduzca un valor: "), 10);
+        if (valor < 0) {
+            vnegativo ++;
+        }
+        else if (valor > 0) {
+            vpositivo ++;
+            if (valor%15==0) {
+                vmultiplo15++;
+            }
+            if (valor%2==0){
+            vacumulado = vacumulado + valor;
+        }
+        }
+        
+    }
+    document.write("La cantidad de valores negativos ingresados es: " + vnegativo + "</br>");
+    document.write("La cantidad de valores positivos ingresados es: " + vpositivo + "</br>");
+    document.write("La cantidad de valores multiplos de 15 ingresados es: " + vmultiplo15 + "</br>");
+    document.write("La suma de los valores pares acumulados es: " + vacumulado + "</br>");
+    </script>
+</body>
+</html>

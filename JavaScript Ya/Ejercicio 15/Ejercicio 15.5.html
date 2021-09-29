@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15.5</title>
+</head>
+<!--Realizar un programa que lea los lados de 4 triángulos, e informar:
+a) De cada uno de ellos, qué tipo de triángulo es: equilátero (tres lados iguales), isósceles (dos lados iguales), o escaleno (ningún lado igual)
+b) Cantidad de triángulos de cada tipo.
+c) Tipo de triángulo del que hay menor cantidad.-->
+<body>
+    <script type="text/javascript">
+    let lado1, lado2, lado3, equilatero, isosceles, escaleno;
+    equilatero  = 0;
+    isosceles   = 0;
+    escaleno    = 0;
+    for (let t = 1; t <= 4; t++) {
+        lado1 = parseInt(prompt("Ingrese el primer lado"),10);
+        lado2 = parseInt(prompt("Ingrese el segundo lado"),10);
+        lado3 = parseInt(prompt("Ingrese el tercer lado"),10);
+        if (lado1 == lado2 && lado2 == lado3) {
+            document.write("El tipo de triangulo es equilatero.</br>");
+            equilatero ++;
+        }
+        else if (lado1 != lado2 && lado2 != lado3 && lado1 != lado3) {
+            document.write("El tipo de triangulo es escaleno.</br>");
+            escaleno ++;
+        }
+        else
+        {
+            document.write("El tipo de triangulo es isosceles.</br>");
+            isosceles ++;
+        }
+    }
+    document.write("</br>Hay " + equilatero + " triangulos equilatero. </br>");
+    document.write("Hay " + isosceles + " triangulos isosceles.</br>");
+    document.write("Hay " + escaleno + " triangulos escaleno.</br></br>");
+    if (equilatero > isosceles && equilatero > escaleno) {
+        document.write("Hay mas triangulos equilateros.");
+    }
+    else if (isosceles > equilatero && isosceles > escaleno)
+    {
+        document.write("Hay mas triangulos isosceles.");
+    }
+    else
+    {
+        document.write("Hay mas triangulos escalenos.");
+    }
+    </script>
+</body>
+</html>
