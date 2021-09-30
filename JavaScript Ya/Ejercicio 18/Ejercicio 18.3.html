@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18.3</title>
+</head>
+<!--Desarrollar una función que retorne la cantidad de dígitos que tiene una variable entera positiva de hasta 5 dígitos.-->
+<body>
+    <script type="text/javascript">
+    function Digitos(variable){
+        if (variable <= 9) {
+            document.write("Tiene un digito.")
+        }
+        else if (variable >= 10 && variable <= 99) {
+            document.write("Tiene dos digitos.")
+        }
+        else if (variable >= 100 && variable <= 999) {
+            document.write("Tiene tres digitos.")
+        }
+        else if (variable >= 1000 && variable <= 9999) {
+            document.write("Tiene cuatro digitos.")
+        }
+        else if (variable >= 10000 && variable <= 99999) {
+            document.write("Tiene cinco digitos.")
+        }
+        else
+        {
+            document.write("Tiene mas de cinco digitos.")
+        }
+    }
+    let valor;
+    valor = parseInt(prompt("Ingrese un valor: "), 10);
+    Digitos(valor);
+    </script>
+</body>
+</html>

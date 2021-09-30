@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18.1</title>
+</head>
+<!--Confeccionar una función a la cual le envíe tres enteros y retorne el mayor de ellos.-->
+<body>
+    <script type="text/javascript">
+    function Mayor(n1, n2, n3)
+    {
+        if (n1 > n2 && n1 > n3) {
+            document.write("El mayor es " + n1);
+        }
+        else if(n2 > n1 && n2 > n3)
+        {
+            document.write("El mayor es " + n2);
+        }
+        else
+        {
+            document.write("El mayor es " + n3);
+        }
+    }
+    let valor1, valor2, valor3;
+    valor1 = parseInt(prompt("Introduzca el primer valor: "), 10);
+    valor2 = parseInt(prompt("Introduzca el segundo valor: "), 10);
+    valor3 = parseInt(prompt("Introduzca el tercer valor: "), 10);
+    Mayor(valor1, valor2, valor3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18.5</title>
+</head>
+<!--Confeccionar una función que solicite la carga de 5 valores por teclado y retorne su suma.-->
+<body>
+    <script type="text/javascript">
+    function Suma(n1,n2,n3,n4,n5)
+    {
+        sum = n1+n2+n3+n4+n5;
+        document.write("La suma de los valores ingresados es: " + sum);
+    }
+    let valor1, valor2, valor3, valor4, valor5;
+    valor1 = parseInt(prompt("Introduzca el primer valor: "), 10);
+    valor2 = parseInt(prompt("Introduzca el segundo valor: "), 10);
+    valor3 = parseInt(prompt("Introduzca el tercer valor: "), 10);
+    valor4 = parseInt(prompt("Introduzca el cuarto valor: "), 10);
+    valor5 = parseInt(prompt("Introduzca el quinto valor: "), 10);
+    Suma(valor1, valor2, valor3, valor4, valor5);
+    </script>
+</body>
+</html>

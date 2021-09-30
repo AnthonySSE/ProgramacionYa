@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18.4</title>
+</head>
+<!--Elaborar una función que reciba tres enteros y retorne el promedio.-->
+<body>
+    <script type="text/javascript">
+    function promedio (v1, v2, v3)
+    {
+        let prom = (v1+v2+v3)/3;
+        document.write("El promedio de los valores ingresados es: " + prom);
+    }
+    let valor1, valor2, valor3;
+    valor1 = parseInt(prompt("Introduzca el primer valor: "), 10);
+    valor2 = parseInt(prompt("Introduzca el segundo valor: "), 10);
+    valor3 = parseInt(prompt("Introduzca el tercer valor: "), 10);
+    promedio(valor1, valor2, valor3);
+    </script>
+</body>
+</html>
