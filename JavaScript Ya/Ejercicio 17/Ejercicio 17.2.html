@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17.2</title>
+</head>
+<!--Confeccionar una función a la cual le envíe tres enteros y los muestre ordenados de menor a mayor.-->
+<body>
+    <script type="text/javascript">
+    function MenoraMayor (a, b, c)
+    {
+        if (a < b && a < c) {
+            document.write(a + " - ");
+            if (b < c) {
+                document.write(b + " - " + c); 
+            }
+            else
+            {
+                document.write(c + " - " + b);
+            }
+    }
+    if (b < a && b < c) {
+            document.write(b + " - ");
+            if (a < c) {
+                document.write(a + " - " + c); 
+            }
+            else
+            {
+                document.write(c + " - " + a);
+            }
+    }
+    if (c < a && c < b) {
+            document.write(c + " - ");
+            if (a < b) {
+                document.write(a + " - " + b); 
+            }
+            else
+            {
+                document.write(b + " - " + a);
+            }
+    }
+}
+    let valor1, valor2, valor3;
+    valor1 = parseInt(prompt("Introduzca el primer valor: "), 10);
+    valor2 = parseInt(prompt("Introduzca el segundo valor: "), 10);
+    valor3 = parseInt(prompt("Introduzca el tercer valor: "), 10);
+    document.write("Los valores ingresados fueron: " + valor1 + " - " + valor2 +" - "+ valor3 + "</br>" +
+    "Ordenados de menor a mayor se verian de la siguiente forma: </br>");
+    MenoraMayor(valor1, valor2, valor3);
+    </script>
+</body>
+</html>
