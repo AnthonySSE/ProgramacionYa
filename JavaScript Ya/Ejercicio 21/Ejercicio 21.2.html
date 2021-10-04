@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 21.2</title>
+</head>
+<!--Realizar un programa que pida la carga de dos vectores numéricos. Obtener la suma de los dos vectores, dicho resultado guardarlo en un tercer vector del mismo tamaño. Sumar componente a componente.
+El tamaño del vector es a elección.-->
+<body>
+    <script type="text/javascript">
+    function carga1(vector1) {
+        for (let f = 0; f < vector1.length; f++) {
+            let valor = parseInt(prompt("Introduzca los valores del primer vector: "), 10);
+            vector1[f] = valor;
+        }
+    }
+    function carga2(vector2) {
+        for (let f = 0; f < vector2.length; f++) {
+            let valor = parseInt(prompt("Introduzca los valores del segundo vector: "), 10);
+            vector2[f] = valor;
+        }
+    }
+    function suma(vector1, vector2) {
+        let suma = 0;
+        for (let f=0; f < vector1.length; f++) {
+            suma = vector1[f] + vector2[f];
+            document.write(suma + " ");
+        }
+    }
+    let vector1, vector2;
+    vector1 = parseInt(prompt("Introduzca el tamaño de los vectores: "), 10);
+    vector2 = parseInt(vector1);
+    vector1 = new Array(vector1);
+    vector2 = new Array(vector2);
+    carga1(vector1);
+    carga2(vector2);
+    suma(vector1, vector2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 21.1</title>
+</head>
+<!--Desarrollar un programa que permita ingresar un vector de 8 elementos, e informe:
+El valor acumulado de todos los elementos del vector.
+El valor acumulado de los elementos del vector que sean mayores a 36.
+Cantidad de valores mayores a 50.-->
+<body>
+    <script type="text/javascript">
+    function cargar(elemento) {
+        let valor;
+        for (let f = 0; f < elemento.length; f++) {
+        valor = parseInt(prompt("Introduzca el valor del elemento: "));
+        elemento[f] = valor;
+    }
+}
+    function suma(elemento) {
+        let suma = 0;
+        for (let f = 0; f < elemento.length; f++) {
+            suma = suma + elemento[f];
+        }
+        document.write("Esta es la suma total de los elementos acumulados: " + suma + "</br>");
+    }
+    function mayor36(elemento) {
+        let mayor36 = 0;
+        for (let f = 0; f < elemento.length; f++) {
+            if (elemento[f] >= 36) {
+                mayor36 = mayor36 + elemento[f];
+            }
+            
+        }
+        document.write("Esta es la suma de los elementos mayores a 36: " + mayor36 + "</br>");
+    }
+    function mayor50(elemento) {
+        let mayor50 = 0;
+        for (let f = 0; f < elemento.length; f++) {
+            if (elemento[f] >= 50) {
+                mayor50++;
+            }
+            
+        }
+        document.write("Esta es la cantidad de elementos mayores a 50: " + mayor50 + "</br>");
+    }
+    let elemento;
+    elemento = new Array(8);
+    cargar(elemento);
+    suma(elemento);
+    mayor36(elemento);
+    mayor50(elemento);
+    </script>
+</body>
+</html>
