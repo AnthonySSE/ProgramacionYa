@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 23.5</title>
+</head>
+<!--Realizar un programa que permita cargar una dirección de mail e implementar una función que verifique si el String tiene cargado el carácter @.-->
+<body>
+    <script type="text/javascript">
+    function mail(correo) {
+        let mail;
+        mail = prompt("Introduzca su correo: ");
+        if (mail.indexOf("@") == -1) {
+            document.write("El correo debe contener @.");
+        }
+        else
+        {
+            document.write("Su correo es: " + mail);
+        }
+    }
+    let correo;
+    mail(correo);
+    </script>
+</body>
+</html>

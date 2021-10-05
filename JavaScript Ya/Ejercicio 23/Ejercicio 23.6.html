@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 23.6</title>
+</head>
+<!--Cargar un String por teclado e implementar las siguientes funciones:
+a) Imprimir la primera mitad de los caracteres de la cadena.
+b) Imprimir el último carácter.
+c) Imprimirlo en forma inversa.
+d) Imprimir cada carácter del String separado con un guión.
+e) Imprimir la cantidad de vocales almacenadas.-->
+<body>
+    <script type="text/javascript">
+    function funcionesstring (c) {
+        let cadena, mitad, smitad, ucaracter, sinverso, finverso, uinverso, sseparado, useparado, cvocales;
+        cvocales = 0;
+        //Entrada de datos
+        //separador = "-";
+        cadena = prompt("Introduzca la cadena: ");
+        document.write("Usted introdujo el string: " + cadena);
+        // Primera mitad
+        mitad = cadena.length/2;
+        smitad = cadena.substring(0,mitad);
+        document.write("</br></br>La primera mitad de dicho string es: " + smitad);
+        // Ultimo caracter
+        ucaracter = cadena[cadena.length - 1];
+        document.write("</br></br>El ultimo caracter es: " + ucaracter);
+        // Forma inversa
+        sinverso = cadena.split("");
+        finverso = sinverso.reverse();
+        uinverso = finverso.join("");
+        document.write("</br></br>El inverso es: " + uinverso);
+        // Cada caracter separado por un guion
+        sseparado = cadena.split("");
+        useparado = sseparado.join("-")
+        document.write("</br></br>Separado por un guion es: " + useparado);
+        // Cantidad de vocales almacenadas
+        cvocales = cadena.match(/[aeiou]/gi).length
+        document.write("</br></br>La cantidad de vocales almacenadas es: " + cvocales);
+    }
+    let cadena;
+    funcionesstring(cadena);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 23.7</title>
+</head>
+<!--Codifique un programa que permita cargar una oración por teclado, luego mostrar cada palabra ingresada en una línea distinta.
+Por ejemplo si cargo:
+	La mañana está fría.
+Debe aparecer:
+La
+mañana
+está
+fría.-->
+<body>
+    <script type="text/javascript">
+    let cadena, salto, usalto;
+    cadena = prompt("Inserte una oracion: ");
+    salto = cadena.split(" ");
+    usalto = salto.join("</br>");
+    document.write("Oracion dividida por saltos de linea: </br>" + usalto);
+    </script>
+</body>
+</html>

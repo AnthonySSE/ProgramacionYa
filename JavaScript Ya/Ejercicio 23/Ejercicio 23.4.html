@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 23.4</title>
+</head>
+<!--Ingresar una palabra o texto por teclado y determinar si es o no una palabra palíndromo. (Palabra que se lee de igual manera de adelante hacia atrás, que de atrás hacia delante)-->
+<body>
+    <script type="text/javascript">
+    
+    let palabra, dividir, palindromo, reverso;
+    palabra = prompt("Introduzca la palabra: ");
+    dividir = palabra.split("");
+    reverso = dividir.reverse();
+    palindromo = reverso.join("");
+    if (palabra.toUpperCase() === palindromo.toUpperCase()) {
+        document.write("La palabra " + palabra + " es un palindromo.");
+    }
+    else
+    {
+        document.write("La palabra " + palabra + " no es un palindromo.");
+    }
+    </script>
+</body>
+</html>

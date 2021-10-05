@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 23.3</title>
+</head>
+<!--Realizar la búsqueda de un string clave en un string fuente. Se deberá ingresar una frase o texto (fuente) y luego la clave a buscar. En caso de encontrarla, imprimir la posición, de lo contrario una leyenda que indique que no está.-->
+<body>
+    <script type="text/javascript">
+    let fuente, clave, posicion;
+    fuente      = prompt("Ingrese el String fuente: ");
+    clave       = prompt("Ingrese el string clave a buscar: ");
+    posicion    = fuente.indexOf(clave);
+    if (posicion != -1) {
+        document.write("El palabra que busca empieza en la posicion: " + posicion);
+    }
+    else
+    {
+        document.write("La palabra que busca no esta en la cadena.");
+    }
+    </script>
+</body>
+</html>

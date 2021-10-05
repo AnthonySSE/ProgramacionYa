@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 23.1</title>
+</head>
+<!--Ingresar una serie de nombres por teclado hasta que se cargue la palabra Fin, y mostrar cuántos nombres se ingresaron.-->
+<body>
+    <script type="text/javascript">
+    let cadena, contador = 0;
+    cadena = prompt("Ingrese un nombre (Ingrese Fin para terminar): ");
+    while (cadena != "Fin") {
+        contador++;
+        cadena = prompt("Ingrese un nombre (Ingrese Fin para terminar): ");
+    }
+    document.write("Se ingresaron " + contador + " nombres.");
+    </script>
+</body>
+</html>
