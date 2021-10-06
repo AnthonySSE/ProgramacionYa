@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 26</title>
+</head>
+<!--Disponer dos campos de texto tipo password. Cuando se presione un botón mostrar si las dos claves ingresadas son iguales o no (es muy común solicitar al operador el ingreso de dos veces de su clave para validar si las escribió correctamente, esto se hace cuando se crea una password para el ingreso a un sitio o para el cambio de una existente).
+Tener en cuenta que podemos emplear el operador == para ver si dos string son iguales.-->
+<body>
+    <form>
+        <p>Ingrese su contrasena: <input type="password" id="clave1"> </p>
+        <p>Ingrese su contrasena nuevamente: <input type="password" id="clave2"> </p>
+        <input type="button" value="Verificar Contrasena" onclick="validarcontrasena()">
+    </form>
+
+    <script type="text/javascript">
+    function validarcontrasena(){
+        let contra1, contra2;
+        contra1 = document.getElementById("clave1").value;
+        contra2 = document.getElementById("clave2").value;
+        if (contra1 == contra2) {
+            alert("Las contrasenas ingresadas son iguales.")
+        }
+        else
+        {
+            alert("Las contrasenas ingresadas no coinciden. Ingrese de nuevo, por favor.");
+        }
+    }
+    </script>
+</body>
+</html>
