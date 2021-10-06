@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 25.1</title>
+</head>
+<!--Crear un programa que permita cargar un entero en un text y al presionar un botón nos muestre dicho valor elevado al cubo (emplear la función alert).-->
+<body>
+    <form>
+        <p>Ingrese un valor: <input type="text" id="entero"></p>
+        <input type="button" value="Calcular Cubo" onclick="cubo()">
+    </form>
+
+    <script type="text/javascript">
+    function cubo(){
+        let numero, ccubo;
+        numero = parseInt(document.getElementById("entero").value);
+        ccubo  = Math.pow(numero,3);
+        alert("El cubo del numero ingresado es: " + ccubo);
+    }
+    </script>
+</body>
+</html>

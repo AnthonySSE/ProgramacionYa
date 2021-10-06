@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 25.3</title>
+</head>
+<!--Cargar un nombre y un apellido en sendos text. Al presionar un botón, concatenarlos y mostrarlos en un tercer text (Tener en cuenta que podemos modificar la propiedad value de un objeto TEXT cuando ocurre un evento)-->
+<body>
+    <form>
+        <p>Ingrese un nombre:   <input type="text" id="nombre"> </p>
+        <p>Ingrese un apellido: <input type="text" id="apellido"> </p>
+        <p>El nombre y apellido ingresados es: <input type="text" id="concatenacion" readonly> </p>
+        <input type="button" value="Concatenar" onclick="concatenar()">
+    </form>
+
+    <script type="text/javascript">
+    function concatenar(){
+    let nombrejs, apellidojs, concatenacionjs;
+    nombrejs = document.getElementById("nombre").value;
+    apellidojs = document.getElementById("apellido").value;
+    concatenacionjs = document.getElementById("concatenacion").value = nombrejs + " " + apellidojs;
+    }
+    </script>
+</body>
+</html>
