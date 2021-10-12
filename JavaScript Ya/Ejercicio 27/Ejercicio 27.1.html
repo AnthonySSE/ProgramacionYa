@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 27.1</title>
+</head>
+<!--Confeccionar una página que muestre un objeto SELECT con distintos tipos de pizzas (Jamón y Queso, Muzzarella, Morrones). Al seleccionar una, mostrar en un objeto de tipo TEXT el precio de la misma.-->
+<body>
+    <select id="seleccionar" onchange="seleccionarpizza()">
+        <option value="400">Jamon y Queso</option>
+        <option value="500">Muzzarella</option>
+        <option value="600">Morrones</option>
+    </select>
+
+    <p>Usted selecciono la pizza: <input type="text" id="pizza"></p>
+    <p>El precio es: <input type="text" id="precio"></p>
+
+    <script type="text/javascript">
+    function seleccionarpizza() {
+        let seleccionar;
+        seleccionar = document.getElementById("seleccionar");
+        document.getElementById("pizza").value = seleccionar.options[seleccionar.selectedIndex].text;
+        document.getElementById("precio").value = seleccionar.options[seleccionar.selectedIndex].value;
+    }
+    </script>
+</body>
+</html>

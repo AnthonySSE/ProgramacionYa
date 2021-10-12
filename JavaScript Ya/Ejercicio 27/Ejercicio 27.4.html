@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 27.4</title>
+</head>
+<!--Confeccionar una página que permita tomar un examen múltiple choice. Se debe mostrar una pregunta y seguidamente un objeto SELECT con las respuestas posibles. Al presionar un botón mostrar la cantidad de respuestas correctas e incorrectas (Disponer 4 preguntas y sus respectivos controles SELECT)-->
+<body>
+    <form>
+        <caption>Que significa JS?</caption>
+        <br>
+        <select id="respuesta1">
+            <option value="1">Java</option>
+            <option value="2">Jason</option>
+            <option value="3">Javascript</option>
+        </select>
+        <br><br><br>
+        <caption>Que es Javascript?</caption>
+        <br>
+        <select id="respuesta2">
+            <option value="1">Un idioma</option>
+            <option value="2">Un lenguaje de programacion</option>
+            <option value="3">Una marca de ropa</option>
+        </select>
+        <br><br><br>
+        <caption>Que se maneja con Javascript?</caption>
+        <br>
+        <select id="respuesta3">
+            <option value="1">BackEnd/FrontEnd</option>
+            <option value="2">FrontEnd</option>
+            <option value="3">BackEnd</option>
+        </select>
+        <br><br><br>
+        <caption>Cuales son los tres pilares del desarrollo web?</caption>
+        <br>
+        <select id="respuesta4">
+            <option value="1">C#, Python, Java</option>
+            <option value="2">CSS, SASS, LESS</option>
+            <option value="3">HTML, CSS, Javascript</option>
+        </select>
+        <p><input type="button" value="Controlar" onClick="verificar()"></p>
+    </form>
+
+    <script type="text/javascript">
+        function verificar() {
+            let correctas = 0;
+            let ele1 = document.getElementById('respuesta1'); // Variable que almacena el valor de la primera pregunta.
+            let ele2 = document.getElementById('respuesta2'); // Variable que almacena el valor de la segunda pregunta.
+            let ele3 = document.getElementById('respuesta3'); // Variable que almacena el valor de la tercera pregunta.
+            let ele4 = document.getElementById('respuesta4'); // Variable que almacena el valor de la cuarta pregunta.
+            if (ele1.options[ele1.selectedIndex].value == 3) { // Condicion para ir aumentando el valor de las respuestas correctas.
+                correctas++;
+            }
+            if (ele2.options[ele2.selectedIndex].value == 2) { // Condicion para ir aumentando el valor de las respuestas correctas.
+                correctas++;
+            }
+            if (ele3.options[ele3.selectedIndex].value == 1) { // Condicion para ir aumentando el valor de las respuestas correctas.
+                correctas++;
+            }
+            if (ele4.options[ele4.selectedIndex].value == 3) { // Condicion para ir aumentando el valor de las respuestas correctas.
+                correctas++;
+            }
+            alert('Cantidad de respuestas correctas:' + correctas); // Mensaje final.
+        }
+    </script>
+</body>
+</html>
