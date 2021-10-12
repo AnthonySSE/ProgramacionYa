@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 29</title>
+</head>
+<!--Confeccionar una página que muestre dos objetos de la clase RADIO solicitando que seleccione si es mayor de 18 años o no. Al presionar un botón mostrar un alert indicando si puede ingresar al sitio o no.-->
+<body>
+    <form>
+        <caption>Seleccione si es mayor o menor de 18 años</caption>
+        <br>
+        <input type="radio" id="mayor" name="edad">Mayor de 18 años.
+        <br>
+        <input type="radio" id="menor" name="edad">Menor de 18 años.
+        <br>
+        <input type="button" value="Mostrar" onclick="DeterminarEdad()">
+    </form>
+
+    <script type="text/javascript">
+    function DeterminarEdad() {
+        if (document.getElementById("mayor").checked) {
+            alert("Puede ingresar.");
+        }
+        else
+        {
+            alert("No puede ingresar.");
+        }
+    }
+    </script>
+</body>
+</html>

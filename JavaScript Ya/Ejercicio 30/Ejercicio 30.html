@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 30</title>
+</head>
+<!--Confeccionar una página de visitas a un sitio, solicitar ingresar el nombre de una persona, su mail y los comentarios (TEXTAREA). Mostrar luego llamando a la función alert los datos ingresados.-->
+<body>
+    <form>
+        Ingrese su nombre:<br><input type="text" id="nombre">
+        <br>
+        Ingrese su correo:<br><input type="email" id="correo">
+        <br><br>
+        <textarea id="comentarios" cols="50" rows="10" placeholder="Ingrese los comentarios"></textarea>
+        <br><br>
+        <input type="button" value="Mostrar" onclick="MostrarDatos()">
+    </form>
+
+    <script type="text/javascript">
+    function MostrarDatos() {
+        let nombre, correo, comentarios;
+        nombre      = document.getElementById("nombre").value;
+        correo      = document.getElementById("correo").value;
+        comentarios = document.getElementById("comentarios").value;
+        alert(nombre + "\n" + correo + "\n" +comentarios);
+    }
+    </script>
+</body>
+</html>

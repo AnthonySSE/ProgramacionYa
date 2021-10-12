@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 28</title>
+</head>
+<!--Confeccionar una página que muestre tres checkbox que permitan seleccionar los deportes que practica el usuario (Fútbol, Básket, Tenis) Mostrar al presionar un botón los deportes que eligió.-->
+<body>
+  <form> 
+      <caption>Seleccione los deportes que practica: </caption>
+      <br>
+      <input type="checkbox" id="baseball">Baseball
+      <br>
+      <input type="checkbox" id="basketball">Basketball
+      <br>
+      <input type="checkbox" id="futbol">Fútbol
+      <br>
+      <input type="checkbox" id="tenis">Tenis
+      <br>
+      <input type="button" value="Mostrar" onclick="MostrarDeportes()">
+  </form>
+
+  <script type="text/javascript">
+  function MostrarDeportes() { //Creacion de la función.
+    let deportes=""; // Variable concatenadora de Strings.
+  if (document.getElementById("baseball").checked) { // Condicional
+      deportes = deportes + "Baseball "; // Acumulador de strings.
+  }
+  if (document.getElementById("basketball").checked) {
+      deportes = deportes + "Basketball ";
+  }
+  if (document.getElementById("futbol").checked) {
+      deportes = deportes + "Futbol ";
+  }
+  if (document.getElementById("tenis").checked) {
+      deportes = deportes + "Tenis ";
+  }
+  alert("Usted eligió los siguientes deportes: " + deportes);    // Mensaje final con los strings seleccionados.
+  }
+  </script>
+</body>
+</html>

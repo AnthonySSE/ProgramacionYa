@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 31</title>
+</head>
+<!--Solicitar que se ingrese el nombre y la clave de un usuario. Mostrar una ventana de alerta si en la clave se ingresan menos de 7 caracteres o más de 20 (capturar el evento onBlur)-->
+<body>
+    <form>
+        Ingrese su nombre:<br><input type="text" id="nombre"><br>
+        Ingrese se contraseña:<br><input type="password" id="contra" onblur="VerificarContra(this)">
+    </form>
+
+    <script type="text/javascript">
+    function VerificarContra(control) { //Funcion que se utiliza para validar el blur en un control.
+        // Para activar eventos como el onBlur o el onFocus, se debe crear la funcion y pasarle un parametro (al menos).
+        // El onBlur se activa cuando el usuario sale de un control especifico.
+        // La funcion recibe un parametro, en este caso, ese parametro es nuestro control en cuestión que para este ejercicio es contra.
+        // El onFocus funciona en sentido inverso al onBlur. Se activa cuando el usuario está sobre el objeto.
+        // value.length es posible utilizar varias propiedades para un metodo en especifico. Tener esto en cuenta.
+        if (document.getElementById("contra").value.length <7 || document.getElementById("contra").value.length >20) 
+        {
+            alert("LA CONTRASEÑA DEBE TENER ENTRE 7 Y 20 CARACTERES");   
+        }
+    }
+    </script>
+</body>
+</html>
